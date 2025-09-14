@@ -1,0 +1,378 @@
+<html>
+<head>
+    <!-- script src="my.js"></script -->
+    <script type="text/javascript">
+      //document.write("<h1>Hello World!**</h1>");
+      //var j = 10;
+      //j = j + 1;
+      //console.log("hello2, j = " + j);
+      //
+      //alert("2 === \"2\" is: " + (2 === "2"));
+    //
+    //  var let const
+    //my = "abc";
+    //my = new String("abc");
+    //my = 123;
+    //my = new Object();
+    //my = new Array();
+    //my = null;
+    //my = NaN;
+    //alert("typeof my = " + (typeof my) + "   my = " + my);
+    //
+    //car = {myCar: "Saturn", 7: "Mazda", getCar: "Honda", special: "Sales"};
+    //alert("car.myCar = " + car.myCar + "\ncar.7 = " + car.special + "   typeof car is: " + typeof car);
+    //alert("car[7] = " + car[7] + " car[myCar] = " + car['myCar']);
+    //
+    /*
+    var p = "Hello";
+    //let p = "Hello";
+    //p = "Hello";
+    //const p = "Hello";
+    function Course(n, t) {  // best placed in <head>
+        this.number = n;     // keyword "this" is required, not optional
+        this.teacher = t;
+        //this.7 = arguments[2];
+        var p = arguments[3] != null ? arguments[3] : "EMPTY";
+        console.log('p=' + p);
+        return "Hello, n = " + n + " t = " + t + "  p = " + p;
+    }
+    //
+    //alert("typeof Course = " + (typeof Course) );
+    res = Course(123, "Ivan");
+    //res = Course(123, "Ivan", 33, 44, 55);
+    alert("res = " + res + "\nfrom main p = " + p);  // delete var
+    //alert("res = " + res + " from main p = " + 123);
+    //
+    //
+    //var c =  new Course("CIT597", "Dr. Dave");
+    //var c = { number: "CIT597", teacher: "Dr. Dave" }
+    //
+    //var c = new Object();
+    //c.number = "CIT597";
+    //c.teacher = "Dr. Dave";
+    //c.toString = function() {return "gray";};
+    //alert("c.teacher = " + c.teacher + "  c[number] = " + c["number"] + "\nc = " + c + "  typeof is: " + typeof c); // c.toString();
+    //
+    //alert("message = " + Course("Ivan", " Petro", "hahaha", "bebebe"));
+    */
+
+    //
+    /*
+    //alert("2 == \"2\" is: " + (2 == "2"));
+    //alert("2 === \"2\" is: " + (2 === "2"));
+    //
+    //val = new String("Hello World");
+    val = "Hello World";
+    //val = 123;
+    if (typeof val === 'string') {
+    //if (typeof val == 'object') {
+      alert('Variable is a string');
+      console.log('Variable is a string');
+    } else {
+      alert('Variable is NOT a string');
+    }
+    */
+
+    //
+    /*
+    myArray = {0:5, 1:8, 2:4, 3:1, 4:2};
+    myArray.length = 5;
+    myArray.toString = function() {
+      var res = "[";
+      for (var prop in myArray) {
+         console.log("typeof prop = " + typeof prop + "  prop = " + prop);
+         if (prop.length == 1) {
+            res = res + " " + myArray[prop];
+         }
+      }
+      return res+" ]";
+    };
+    */
+    //
+
+    /*
+    //myArray = [5,8,4,1,2];
+    //myArray = new Array(5,8,4,1,2);
+    //alert("myArray.length = " + myArray.length);
+    //
+    //myArray = new Array(10);
+    myArray = new Array(1);
+    myArray[0] = 5;
+    myArray[1] = 8;
+    myArray[2] = 4;
+    myArray[3] = 1;
+    myArray[4] = 2;
+    myArray[5] = 7;
+    //alert("Original myArray = " + myArray.toString());
+    //myArray.length = 3;
+    alert("Original myArray = " + myArray + "  myArray.length = " + myArray.length);
+    //
+    myArray.sort() // ASC sorting
+    //myArray.sort(function(a, b) { return b - a; })
+    alert("Sorted myArray = " + myArray.toString());
+    //alert("is Array variable myArray = " + (Array.isArray(myArray) ? "yes, array" : "NOT Array"));
+    */
+
+    //
+    /*
+    let number = 10;
+    // if statement to check if the number is greater than 5
+    if (number > 5) {
+        console.log("Number is greater than 5.");  // This line will be executed
+    }
+    //
+    let age = 17;
+    // if-else statement to check if the person is an adult
+    if (age >= 18) {
+        console.log("You are an adult.");  // This line will be executed
+    } else {
+        console.log("***You are not an adult.");
+    }
+    console.log("done.");
+    */
+
+    //
+    /*
+    //color = "black";
+    color = "blue";
+    // Using switch to perform different actions based on the value of 'color'
+    switch (color) {
+    case "red":
+        console.log("Color is red");
+        break;
+    case "blue":
+        console.log("Color is blue");  // This line will be executed
+        break;
+    case "green":
+        console.log("Color is green");
+        break;
+    default:
+        console.log("Unknown color");
+    }
+    //
+    if (color == "red") {
+        console.log("Color is red2");
+    } else if (color == "blue") {
+        console.log("Color is blue2");
+    } else if (color == "green") {
+        console.log("Color is green2");
+    } else {
+        console.log("Unknown color2");
+    }
+    */
+
+
+    //
+    /*
+    // Iterating over a 2D array with a nested for loop
+    let matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+        [10, 11, 12, 13]
+    ];
+    //
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            console.log(" " + matrix[i][j] + " ");
+        }
+        console.log("\n");
+        //console.log(matrix[i]);
+    }
+    */
+    //
+
+    /*
+    // Using a while loop with a control statement
+    let num = 0;
+    while (num<10) {
+        num++;
+        if (num > 5) {
+            console.log("Breaking out of the loop, num = " + num);
+            break;
+        }
+        if (num % 2 === 0) {
+            continue; // skip the rest of the loop and continue with the next iteration
+        }
+        console.log(num); // will print only odd numbers
+    }
+    console.log("done");
+    */
+    //
+
+    /*
+    // A complex do...while loop
+    let value;
+    do {
+        value = Math.random() * 200;    // 0 < Math.random() < 1
+        console.log("Value = " + value);
+    } while (value > 0 && value < 100);
+    */
+    //
+
+
+    /*
+    // Deep inspection of an object using for...in loop
+    let person = {
+        name: "John",
+        age: 30,
+        address: {
+            street: "123 Main St",
+            city: "Anytown"
+        }
+    };
+    //
+    for (let key in person) {
+        console.log("key = " + key + "   typeof person[key] = " + (typeof person[key]) );
+        if (typeof person[key] === 'object') {
+            for (let innerKey in person[key]) {
+                console.log(`${innerKey}: ${person[key][innerKey]}`);
+            }
+        } else {
+            console.log(`${key}: ${person[key]}`);
+        }
+    }
+    */
+
+
+    //
+    /*
+    // Iterating over a Set with for...of
+    //let uniqueNumbers = new Array([1, 2, 3, 4, 5, 2, 5]);
+    let uniqueNumbers = new Set([1, 2, 3, 4, 5, 2, 5, 7]);
+    for (let number of uniqueNumbers) {
+        console.log(number); // Will print numbers from 1 to 5
+    }
+    */
+    //
+
+
+    /*
+    // Using map to transform an array
+    let numbers = [7, 2, 3, 4, 5, 8];
+    numbers.forEach( (num, index, array) => {
+       console.log(`${index}: ${num}, array = ${array}`);
+    });
+    let squares = numbers.map(number => number ** 2);
+    console.log(squares); // [49, 4, 9, 16, 25, 64]
+    //
+    console.log("\nSecond result2");
+    squares1=[];
+    //for (var i = 0; i<numbers.length; i++) {
+    //   squares1.push(numbers[i] ** 2);
+    //}
+    for (let number of numbers) {
+       squares1.push(number ** 2);
+    }
+    console.log(squares1);
+    */
+
+    //
+    /*
+    function mult(a =1, b =2, c =3) {
+       console.log("a = " + a + " b = " + b + " c = " + c);
+       for (let i = 0; i<arguments.length; i++) {
+          console.log("i = " + i + "  arguments[i] = " + arguments[i]);
+       }
+       return a*b*c;
+    }
+    console.log( "mult= " + mult(2,8,5,9,4,3) );
+    console.log( "mult= " + mult(2,8) );
+    console.log( "mult= " + mult() );
+    */
+    //
+
+    /*
+    let x = 123; // Global variable
+    console.log("main(): START x = " + x);
+    function me() {
+       //console.log("me(): x = " + x);
+       //x = 456; // Use Global variable
+       let x = 456; // Use Local variable
+       console.log("me(): x = " + x);
+       return;
+    }
+    me();
+    console.log("main(): END x = " + x);
+    */
+    //
+
+
+    /*
+    var str = "abracadabra abba";
+    //str2  = str.replace("\\ba|a\\b", "-"); // Error
+    //str2  = str.replace("a", "-"); // replaceFirst
+    //str2  = str.replaceAll("a", "-"); // replaceAll
+    str2  = str.replaceAll("ab", "-");
+    console.log("str2 = " + str2);
+    */
+    //
+
+    /*
+    function max1(a,b,c) {
+      console.log("a = " + a + " b = " + b + " c = " + c);
+      var m = Number.NEGATIVE_INFINITY;
+      for (var i = 0; i < arguments.length; i++) {
+         console.log("argument = " + arguments[i]);
+         if (arguments[i] > m) {
+           m = arguments[i];
+           console.log("***new max = " + m);
+         }
+      }
+     return m;
+   };
+   console.log( "max1= " + max1(1,8,5,9,4,3) );
+   */
+
+    //
+    function isPrime(n) {
+       let res = true;
+       for (let i = 2; i < Math.sqrt(n) + 1; i++) {
+          if (n % i == 0) {
+             res = false;
+             break;
+          }
+       }
+       return res;
+    }
+    console.log( "isPrime(2) = " + isPrime(2) );
+    console.log( "isPrime(3) = " + isPrime(3) );
+    console.log( "isPrime(5) = " + isPrime(5) );
+    console.log( "isPrime(4) = " + isPrime(4) );
+    console.log( "isPrime(7) = " + isPrime(7) );
+    console.log( "isPrime(49) = " + isPrime(49) );
+    console.log( "isPrime(16) = " + isPrime(16) );
+    console.log( "isPrime(17) = " + isPrime(17) );
+    console.log( "isPrime(101) = " + isPrime(101) );
+    console.log( "isPrime(1001) = " + isPrime(1001) );
+    //
+
+    /*
+    myArray = ["abcdefgh", "abc", "ab", "absdf", "abcdefghijk", "xy", "uv"];
+    console.log("Original myArray = " + myArray);
+    myArray.sort(function(a, b) {
+       let result = a.length - b.length;
+       if (result == 0) {
+           result = a <= b ? -1 : 1;
+       }
+       return result;
+       //return (a.length - b.length) === 0 ? 
+    })
+    console.log("Sorted myArray = " + myArray.toString());
+    */
+
+
+
+    </script>
+</head>
+
+<body>
+<br>
+   <input type="button" name="myButton" value="ClickMe" OnClick="var i=2+j+k; alert('Hello i='+i);">
+
+<br><br>
+   <input type="button" name="myButton" value="Max" OnClick="alert('max1(5,1,7,8,3,4,2) = ' + max1(5,1,7,8,3,4,2));">
+
+<br><br>
+</body>
+</html>
