@@ -1,4 +1,4 @@
-function isTextOnPage(inputWord) {
+function isTextOnWebPage(inputWord) {
     if (typeof inputWord !== "string" || !inputWord.trim()) return false;
 
     const pageText = document.body.innerText;
@@ -9,7 +9,7 @@ function isTextOnPage(inputWord) {
     return {found: false};
 }
 
-console.log(isTextOnPage("Укр"));        // true
-console.log(isTextOnPage("тест"));       // false
-console.log(isTextOnPage("еко"));        // true
-console.log(isTextOnPage("склянок"));    // true
+console.log(isTextOnWebPage("Укр"));        // true
+console.log(isTextOnWebPage("тест"));       // false
+console.log(isTextOnWebPage("еко"));        // true
+console.log(isTextOnWebPage("склянок"));    // true

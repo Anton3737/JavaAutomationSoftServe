@@ -14,6 +14,7 @@ const value = 15;
 console.log("Вихідний відфільтрований масив:", filterGreaterThanMarkNumber(numbers, value));
 
 
+
 // Callback function used to filter an array
 function filterGreaterThanMarkNumber(arr, threshold) {
     return arr.filter(number => number > threshold);
@@ -22,6 +23,7 @@ function filterGreaterThanMarkNumber(arr, threshold) {
 const numbers = [12, 7, 9, 22, 76, 15, 3, 18, 21, 35, 10];
 const value = 15;
 console.log("Вихідний відфільтрований масив:", filterGreaterThanMarkNumber(numbers, value));
+
 
 
 // Used for-cycle used to filter an array with uniq numbers
@@ -45,5 +47,3 @@ const value = 15;
 console.log("Вихідний відфільтрований масив:", filterGreaterThanMarkNumber(numbers, value));
 // Вихідний відфільтрований масив: Set(6) { 22, 76, 18, 21, 35, 23 }
 // Вихідний відфільтрований масив: [ 22, 76, 18, 21, 35, 23 ]
-
-

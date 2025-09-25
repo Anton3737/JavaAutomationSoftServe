@@ -1,0 +1,218 @@
+<!--Create a script to validate a web form. Your script should include the following functionalities and checks:-->
+
+<!--Required Fields Validation: Ensure that all required fields are filled out. For example, fields like 'Name', 'Email', and 'Password' should not be left empty.-->
+
+<!--Email Format Validation: Validate the email address format to ensure it meets standard email formatting (e.g., user@example.com). Use regular expressions to check if the email entered by the user is in the correct format.-->
+
+<!--Password Strength Check: Implement a password strength validator. The password should meet certain criteria to be considered strong, such as a minimum length (e.g., 8 characters), the inclusion of uppercase and lowercase letters, numbers, and special characters.-->
+
+<!--Confirm Password Matching: If there is a 'Confirm Password' field, check that it matches the 'Password' field.-->
+
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right top, #d16ba5, #d271a8, #d276ab, #d37cad, #d381b0, #cd8cc4, #c598d6, #baa4e5, #97bbfd, #6fd0ff, #5ce2fd, #73f1e9);;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.31);
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #444;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgba(204, 204, 204, 0.27);
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .error {
+            color: #e74c3c;
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        .btn {
+            margin-top: 25px;
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .cloud {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(43, 243, 6, 0.79);
+            color: #000000;
+            padding: 20px 40px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: floatUp 3s ease-out forwards;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translate(-50%, 50px);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -200px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Реєстрація</h2>
+    <form id="registrationForm">
+        <label for="name">Ім'я</label>
+        <input type="text" id="name" placeholder="Введіть ваше ім'я">
+        <div id="nameError" class="error"></div>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="example@email.com">
+        <div id="emailError" class="error"></div>
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="Мін. 8 символів">
+        <div id="passwordError" class="error"></div>
+
+        <label for="confirmPassword">Підтвердити пароль</label>
+        <input type="password" id="confirmPassword" placeholder="Повторіть пароль">
+        <div id="confirmPasswordError" class="error"></div>
+
+        <button type="button" class="btn" onclick="validateForm()">Зареєструватися</button>
+    </form>
+</div>
+
+<script>
+
+    function validateName(name) {
+        if (name.trim() === "") {
+            return "Ім'я не може бути порожнім";
+        } else if (name.length < 2) {
+            return "Ім'я має містити мінімум 2 символи";
+        }
+        return "";
+    }
+
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email.trim() === "") {
+            return "Email не може бути порожнім";
+        } else if (!regex.test(email)) {
+            return "Введіть коректний email";
+        }
+        return "";
+    }
+
+    function validatePassword(password) {
+        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        if (password.trim() === "") {
+            return "Пароль не може бути порожнім";
+        } else if (!regex.test(password)) {
+            return "Пароль має містити мін. 8 символів, включати великі й малі літери, цифру та спецсимвол";
+        }
+        return "";
+    }
+
+    function validateConfirmPassword(password, confirmPassword) {
+        if (confirmPassword.trim() === "") {
+            return "Підтвердження паролю не може бути порожнім";
+        } else if (confirmPassword !== password) {
+            return "Паролі не співпадають";
+        }
+        return "";
+    }
+
+    function cloudTakeOff() {
+
+        const cloud = document.createElement("div");
+        cloud.className = "cloud";
+        cloud.innerText = "Успішна реєстрація!";
+        document.body.appendChild(cloud);
+
+        setTimeout(() => {
+            cloud.remove();
+        }, 3000);
+    }
+
+
+    function validateForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        const nameError = validateName(name);
+        const emailError = validateEmail(email);
+        const passwordError = validatePassword(password);
+        const confirmPasswordError = validateConfirmPassword(password, confirmPassword);
+
+        document.getElementById("nameError").innerText = nameError;
+        document.getElementById("emailError").innerText = emailError;
+        document.getElementById("passwordError").innerText = passwordError;
+        document.getElementById("confirmPasswordError").innerText = confirmPasswordError;
+
+        if (!nameError && !emailError && !passwordError && !confirmPasswordError) {
+            cloudTakeOff();
+        }
+    }
+
+</script>
+</body>
+</html>
