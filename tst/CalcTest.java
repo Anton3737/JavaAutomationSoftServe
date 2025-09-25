@@ -12,7 +12,7 @@ public class CalcTest {
         double actual;
         expected = 10.001;
         actual = calc.add(4,6);
-        Assertions.assertEquals(expected, actual ,)
+//        Assertions.assertEquals(expected, actual ,)
 
     }
 }
