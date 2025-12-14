@@ -22,7 +22,7 @@ public class App {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITLY_WAIT_SECONDS)); // 0 by default
         driver.manage().window().maximize();
         //
-        driver.get("https://google.com/");
+//        driver.get("https://google.com/");
         driver.get("https://www.bing.com/");
         Thread.sleep(4000); // For Presentation
         //

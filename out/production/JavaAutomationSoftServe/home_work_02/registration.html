@@ -1,4 +1,3 @@
-
 <!--Create a script to validate a web form. Your script should include the following functionalities and checks:-->
 
 <!--Required Fields Validation: Ensure that all required fields are filled out. For example, fields like 'Name', 'Email', and 'Password' should not be left empty.-->
@@ -17,7 +16,7 @@
     <title>Реєстрація</title>
     <style>
         body {
-            background: #f2f2f2;
+            background-image: linear-gradient(to right top, #d16ba5, #d271a8, #d276ab, #d37cad, #d381b0, #cd8cc4, #c598d6, #baa4e5, #97bbfd, #6fd0ff, #5ce2fd, #73f1e9);;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
@@ -27,9 +26,9 @@
         }
 
         .container {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.31);
             padding: 30px 40px;
-            border-radius: 12px;
+            border-radius: 16px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             width: 400px;
         }
@@ -50,7 +49,7 @@
         input {
             width: 100%;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid rgba(204, 204, 204, 0.27);
             border-radius: 8px;
             font-size: 1rem;
             box-sizing: border-box;
@@ -85,6 +84,34 @@
         .btn:hover {
             background-color: #0056b3;
         }
+
+        .cloud {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(43, 243, 6, 0.79);
+            color: #000000;
+            padding: 20px 40px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: floatUp 3s ease-out forwards;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translate(-50%, 50px);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -200px);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -112,9 +139,79 @@
 </div>
 
 <script>
-    function validateForm() {
-        //your solution
+
+    function validateName(name) {
+        if (name.trim() === "") {
+            return "Ім'я не може бути порожнім";
+        } else if (name.length < 2) {
+            return "Ім'я має містити мінімум 2 символи";
+        }
+        return "";
     }
+
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email.trim() === "") {
+            return "Email не може бути порожнім";
+        } else if (!regex.test(email)) {
+            return "Введіть коректний email";
+        }
+        return "";
+    }
+
+    function validatePassword(password) {
+        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+        if (password.trim() === "") {
+            return "Пароль не може бути порожнім";
+        } else if (!regex.test(password)) {
+            return "Пароль має містити мін. 8 символів, включати великі й малі літери, цифру та спецсимвол";
+        }
+        return "";
+    }
+
+    function validateConfirmPassword(password, confirmPassword) {
+        if (confirmPassword.trim() === "") {
+            return "Підтвердження паролю не може бути порожнім";
+        } else if (confirmPassword !== password) {
+            return "Паролі не співпадають";
+        }
+        return "";
+    }
+
+    function cloudTakeOff() {
+
+        const cloud = document.createElement("div");
+        cloud.className = "cloud";
+        cloud.innerText = "Успішна реєстрація!";
+        document.body.appendChild(cloud);
+
+        setTimeout(() => {
+            cloud.remove();
+        }, 3000);
+    }
+
+    function validateForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        const nameError = validateName(name);
+        const emailError = validateEmail(email);
+        const passwordError = validatePassword(password);
+        const confirmPasswordError = validateConfirmPassword(password, confirmPassword);
+
+        document.getElementById("nameError").innerText = nameError;
+        document.getElementById("emailError").innerText = emailError;
+        document.getElementById("passwordError").innerText = passwordError;
+        document.getElementById("confirmPasswordError").innerText = confirmPasswordError;
+
+        if (!nameError && !emailError && !passwordError && !confirmPasswordError) {
+            cloudTakeOff();
+        }
+    }
+
 </script>
 </body>
 </html>
