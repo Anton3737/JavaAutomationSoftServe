@@ -49,12 +49,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "3fb22acc-7ae3-41ee-b26a-327f3fe604ed",
+      "id": "2a92ac85-65fc-43e3-b958-efc6309325f7",
       "comment": "",
-      "command": "type",
-      "target": "id=email",
+      "command": "executeScript",
+      "target": "document.getElementById('email').value='antonjava27@gmail.com'",
       "targets": [],
-      "value": "antonjava27@gmail.com"
+      "value": ""
     }, {
       "id": "11715f4b-faa5-47b9-9b01-69cdc9c3b39c",
       "comment": "",
@@ -63,12 +63,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "4c978099-32d3-429a-bc88-c09032262458",
+      "id": "e59ad320-921e-42fa-8d97-a9911d74a313",
       "comment": "",
-      "command": "type",
-      "target": "id=firstName",
+      "command": "executeScript",
+      "target": "document.getElementById('firstName').value='Anton'",
       "targets": [],
-      "value": "Anton"
+      "value": ""
     }, {
       "id": "ccdef115-71e3-4305-9de6-b0aa1d347c39",
       "comment": "",
@@ -77,12 +77,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "4329d08f-0e7f-4d0b-ac57-ff8c906227ba",
+      "id": "d6b38486-8b48-4285-92a1-bb5ab76ad90e",
       "comment": "",
-      "command": "type",
-      "target": "id=password",
+      "command": "executeScript",
+      "target": "document.getElementById('password').value='IloveGots45'",
       "targets": [],
-      "value": "IloveGots45"
+      "value": ""
     }, {
       "id": "49a5f0c0-8cab-4619-9ca8-7e52192913ed",
       "comment": "",
@@ -91,12 +91,12 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "198bf861-fbd7-4544-a9b4-69ede5078a17",
+      "id": "6bf6ade3-b601-446c-9862-087341e81870",
       "comment": "",
-      "command": "type",
-      "target": "id=repeatPassword",
+      "command": "executeScript",
+      "target": "document.getElementById('repeatPassword').value='IloveGots45'",
       "targets": [],
-      "value": "IloveGots45"
+      "value": ""
     }, {
       "id": "0aa3c22d-818a-4a90-b0fd-660400e4d4dc",
       "comment": "",
@@ -137,7 +137,7 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "32b3247b-9b9c-4970-a61f-a665cc9ca0d8",
+      "id": "48ee45e0-4f8d-4907-9454-a4e4a7bd24f6",
       "comment": "",
       "command": "click",
       "target": "id=email",
@@ -146,30 +146,411 @@
     }, {
       "id": "084d29d1-cb3e-4d2f-8710-3e865dee806d",
       "comment": "",
-      "command": "type",
-      "target": "id=email",
+      "command": "executeScript",
+      "target": "document.getElementById('email').value='BarashASUA@gmail.com'",
       "targets": [],
-      "value": "antonjava27@gmail.com"
+      "value": ""
     }, {
-      "id": "7902c6cd-10ce-4714-8ed3-e26ebae8a6c7",
+      "id": "19a32132-2511-492f-9045-8c09257f08de",
       "comment": "",
       "command": "click",
       "target": "id=password",
       "targets": [],
       "value": ""
     }, {
-      "id": "c7fa3986-ab95-4088-9c72-c30db66ca02f",
+      "id": "f5c75989-d3b2-4bd4-a31c-bff6e2eb5e8e",
       "comment": "",
-      "command": "type",
-      "target": "id=password",
+      "command": "executeScript",
+      "target": "document.getElementById('password').value='TestAdmin2025!'",
       "targets": [],
-      "value": "IloveGots45"
+      "value": ""
     }, {
       "id": "f5ffe58e-b595-4d13-b85e-fc1fd6e13424",
       "comment": "",
       "command": "click",
       "target": "css=.sign-in-form",
       "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ba310517-daa6-469e-b3b9-1c4053206577",
+    "name": "InvalidSignIn",
+    "commands": [{
+      "id": "c5a643d5-84ca-4c09-bdff-595860026f08",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.greencity.cx.ua/#/greenCity",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5add5225-4874-463a-a8c4-bb1964e8d0bf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1700x1077",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa7dfd1d-2d80-48cf-911b-a72f6ba9a2d6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "126f11f0-72b6-4bbe-9f0c-303c6ba1a27c",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef0f0639-462b-47b7-8931-6db724ccb8ea",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.getElementById('email').value='antonjava27!11mailcom'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "448430e9-c550-4414-97a4-4e51696d9c3c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#email-err-msg .margining",
+      "targets": [],
+      "value": "Email is required."
+    }, {
+      "id": "7c05bd64-81aa-43bb-a7d7-735b1d8a12aa",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66330557-7a12-4060-ba09-539711ad2c14",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.getElementById('password').value='тестпароль'",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b51fc21-d61e-4475-8c1a-fd9a90e0034a",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=pass-err-msg",
+      "targets": [],
+      "value": "This field is required"
+    }, {
+      "id": "46a693c0-a4ed-45d6-b841-5733574d36dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sign-in-form",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "44ede4a1-b525-4314-a5b2-2f288b4c9b5c",
+    "name": "ValidRegistrationWithoutJS",
+    "commands": [{
+      "id": "bc23c043-b3ee-40c0-aa20-de2374dd8adf",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.greencity.cx.ua/#/greenCity",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a4412b2-b7aa-428f-95ac-3257dcfd7973",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1700x1077",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "27c0fe8d-4631-47ec-8029-54ca9e2f6143",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header_sign-up-btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7068df6-a85c-46df-ba5f-db6b690df208",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1.title-text",
+      "targets": [],
+      "value": "Hello!"
+    }, {
+      "id": "b525e98b-eb23-427b-a8b5-32800d9bd481",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h2.subtitle-text",
+      "targets": [],
+      "value": "Please enter your details to sign up."
+    }, {
+      "id": "4e578f9f-10b0-4c66-a7c3-19b8fd40f3c6",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64e0767e-cf8d-46fa-a50f-8241967b53a3",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [],
+      "value": "antonjava27@gmail.com"
+    }, {
+      "id": "ed98c494-b50a-4382-a517-c56c2ba34a87",
+      "comment": "",
+      "command": "click",
+      "target": "id=firstName",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f881079a-e634-4d1d-8ba7-e8f2b4bed111",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstName",
+      "targets": [],
+      "value": "Anton"
+    }, {
+      "id": "69ac0ff7-8b54-486c-be67-660804b0ab36",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a5a6fdd-bb06-4691-bd86-afc4cf0dac0f",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "IloveGots45"
+    }, {
+      "id": "266347c2-95e5-4b29-a11a-b1212971e3f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=repeatPassword",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9641eac3-be8f-4cf4-b653-7d60a0f6b7c5",
+      "comment": "",
+      "command": "type",
+      "target": "id=repeatPassword",
+      "targets": [],
+      "value": "IloveGots45"
+    }, {
+      "id": "3f95fd7d-80e4-4e76-9429-3dcce994022c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.greenStyle",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30251bd9-9d00-47d2-85ca-f034e632cf02",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header_sign-up-btn > span",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7965c93-2585-46fc-9667-0f0dad44eecd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=.header_sign-in-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//ul/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0d61ea4-515a-41b0-a65c-69319ddb3f29",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-0']/div/div/app-auth-modal/div/div/div[2]/div/app-sign-in/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "afabc118-e8e2-4004-9971-227f86ff60d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-0']/div/div/app-auth-modal/div/div/div[2]/div/app-sign-in/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "BarashASUA@gmail.com"
+    }, {
+      "id": "a8922893-56e9-4384-8746-221569aadb49",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-0']/div/div/app-auth-modal/div/div/div[2]/div/app-sign-in/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9eef049e-15f9-41d0-8062-9b6f4dda7b02",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-0']/div/div/app-auth-modal/div/div/div[2]/div/app-sign-in/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "TestAdmin2025!"
+    }, {
+      "id": "f2f29629-a077-47ca-8bf4-6a01dba307f2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.greenStyle",
+      "targets": [
+        ["css=.greenStyle", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-0']/div/div/app-auth-modal/div/div/div[2]/div/app-sign-in/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29c8ab22-85ac-4f28-b02b-bc200eda37cd",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.greenStyle",
+      "targets": [
+        ["css=.greenStyle", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-0']/div/div/app-auth-modal/div/div/div[2]/div/app-sign-in/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a524ff9c-a7a1-4098-b209-b14e9ffc0392",
+    "name": "test",
+    "commands": [{
+      "id": "3f52b0b8-a559-4aa8-9edd-399f7afccd64",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.greencity.cx.ua/#/greenCity",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3a49482-7ff1-4520-a7ec-cca2c1b56005",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2106x1107",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbcd4914-276b-4126-95cb-2773cce65d27",
+      "comment": "",
+      "command": "click",
+      "target": "css=.body-2",
+      "targets": [
+        ["css=.body-2", "css:finder"],
+        ["xpath=//ul[@id='header_user-wrp']/li", "xpath:idRelative"],
+        ["xpath=//ul[2]/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82bc8313-bf69-4da1-b0c2-20fb2f223079",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=.header_sign-in-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//ul/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "47a178f9-8247-4ff0-83e5-d0e6a395c5d9",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-0']/div/div/app-auth-modal/div/div/div[2]/div/app-sign-in/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "37a1ed4a-5720-41e6-97f9-80ad222674fe",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-0']/div/div/app-auth-modal/div/div/div[2]/div/app-sign-in/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": "BarashASUA@gmail.com"
+    }, {
+      "id": "5954668f-9c34-43c6-9cfd-916f24cdd0a1",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-0']/div/div/app-auth-modal/div/div/div[2]/div/app-sign-in/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dae74bf1-c413-40c7-bd3e-3594256728fc",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-0']/div/div/app-auth-modal/div/div/div[2]/div/app-sign-in/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "TestAdmin2025!"
+    }, {
+      "id": "db101a7d-9c28-444b-81d4-cd0a65dbcc66",
+      "comment": "",
+      "command": "click",
+      "target": "css=.greenStyle",
+      "targets": [
+        ["css=.greenStyle", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//mat-dialog-container[@id='mat-mdc-dialog-0']/div/div/app-auth-modal/div/div/div[2]/div/app-sign-in/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
       "value": ""
     }]
   }],
