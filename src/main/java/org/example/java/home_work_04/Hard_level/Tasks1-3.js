@@ -10,11 +10,6 @@ if (currentDay) {
 
 
 
-
-
-
-
-
 const navButtons = document.querySelectorAll(".arrow-previous, .arrow-next");
 
 console.log("Знайдено навігаційних кнопок:", navButtons.length);
