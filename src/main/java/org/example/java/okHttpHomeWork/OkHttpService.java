@@ -1,4 +1,4 @@
-package okHttpHomeWork;
+package org.example.java.okHttpHomeWork;
 
 import okhttp3.*;
 import org.json.JSONArray;
