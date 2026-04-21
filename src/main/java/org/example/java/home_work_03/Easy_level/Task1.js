@@ -1,9 +1,8 @@
-
 https://www.greencity.cx.ua/#/greenCity
 
 
 //1. Find all images that have an 'alt' attribute.
-$x('//img[@alt]')
+    $x('//img[@alt]')
 // result
 // (21) [img, img, img.header_arrow, img.ubs-header-sing-in-img.ubs-header-sing-in-img-greencity.ng-star-inserted, img#path-2, img#path-4, img#path-5, img#guy-image, img, img, img, img, img, img, img.logo, img, img, img, img, img, img]
 
@@ -29,21 +28,4 @@ $x('//div[contains(@class, "location-row")]//a')
 // result
 // (2) [a.tertiary-global-button.btn-link, a.tertiary-global-button.btn-link]
 // length 2
-
-
-
-
-
-
-// result
-// [li.search-icon.ng-star-inserted]
-// 0:li.search-icon.ng-star-inserted
-// length:1
-
-
-//5. Check for the presence of checkboxes.
-$x("//input[@type='checkbox']")
-// !!! Візуально та через пошук по DevTools не знаходить чекбоксів на головній сторінці.
-
-
 
